@@ -9,9 +9,15 @@ public class Main extends Application{
 	
 	public void start(Stage stage){
 		
-		ViewLoader<AnchorPane, Object> viewLoader =	new ViewLoader<AnchorPane, Object>("view/window.fxml");
+		ViewLoader<AnchorPane, Object> viewLoader =	new ViewLoader<AnchorPane, Object>("window.fxml");
+
+
+
+
 
 		AnchorPane anchorPane = viewLoader.getLayout();
+
+		System.out.println(anchorPane.toString());
 
 		Scene scene = new Scene(anchorPane);
 		stage.setScene(scene);

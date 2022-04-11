@@ -21,7 +21,9 @@ public class ViewLoader<T,U> {
 	public ViewLoader(String fxml){
 		try{
 			FXMLLoader fxmlLoader = new
-					FXMLLoader(Main.class.getResource(fxml));
+					FXMLLoader(Main.class.getClassLoader().getResource(fxml));
+
+			System.out.println(Main.class.getClassLoader().getResource(fxml));
 			
 			ViewLoader = fxmlLoader.load();
 			fxmlController = fxmlLoader.getController();
